@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Code-coverage settings for the unit + integration suite.
+  Scope: the classes this phase of the project is about - everything under TimeCrunch.Models and
+  TimeCrunch.Services. Razor components, Program.cs, migrations and generated code are left out on
+  purpose; they are covered by the system and acceptance tests instead.
+
+  Run:  dotnet test TimeCrunch.Tests --collect:"XPlat Code Coverage" --settings coverlet.runsettings
+-->
+<RunSettings>
+  <DataCollectionRunSettings>
+    <DataCollectors>
+      <DataCollector friendlyName="XPlat Code Coverage">
+        <Configuration>
+          <Format>cobertura,opencover</Format>
+          <Include>[TimeCrunch]TimeCrunch.Models.*,[TimeCrunch]TimeCrunch.Services.*</Include>
+          <Exclude>[TimeCrunch]*.Migrations.*</Exclude>
+          <ExcludeByAttribute>GeneratedCodeAttribute,CompilerGeneratedAttribute,ExcludeFromCodeCoverageAttribute</ExcludeByAttribute>
+          <SkipAutoProps>true</SkipAutoProps>
+          <IncludeTestAssembly>false</IncludeTestAssembly>
+        </Configuration>
+      </DataCollector>
+    </DataCollectors>
+  </DataCollectionRunSettings>
+</RunSettings>

@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="TimeCrunch.csproj" />
+  <Project Path="TimeCrunch.Tests/TimeCrunch.Tests.csproj" />
+</Solution>

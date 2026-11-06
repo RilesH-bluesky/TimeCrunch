@@ -1,0 +1,7 @@
+bin/
+obj/
+.vs/
+*.user
+timecrunch.db
+timecrunch.db-shm
+timecrunch.db-wal
